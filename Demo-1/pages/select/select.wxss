@@ -1,0 +1,25 @@
+@import "../common/lib/weui.wxss";
+
+.body {
+  margin-top: -30rpx;
+  padding: 0 15rpx 10rpx;
+}
+
+.head-line {
+  margin: 0 auto;
+  width: 700rpx;
+  height: 2rpx;
+  background-color: #d8d8d8;
+}
+
+.word-spacing {
+  word-spacing: 40rpx;
+}
+
+.border:after {
+  border: none;
+}
+
+.btn-wrap {
+  margin-top: 50rpx;
+}

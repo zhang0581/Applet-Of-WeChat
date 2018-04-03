@@ -1,0 +1,25 @@
+<view class="wrap">
+    <view class="head">
+        <view class="head-title">试试什么职业最适合你</view>
+    </view>
+    <!-- 选项列表 -->
+    <view class="body">
+        <view class="weui-cells">
+            <view class="weui-cell" wx:for="{{score}}" wx:key="name">
+                <view class="weui-label">{{item.name}}</view>
+                <view class="weui-cell__bd">
+                    <!-- 滚动选择器 -->
+                    <picker bindchange="{{change[index]}}" value="{{init[index].Index}}" range="{{score[index].option}}" range-key="name">
+                        <view class="weui-input">
+                            {{score[index].option[init[index].Index].name}}
+                        </view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+        <!-- 底部按钮 -->
+        <view class="btn-wrap">
+            <button type="primary" bindtap="scoreCalculate">选好了，点击查看</button>
+        </view>
+    </view>
+</view>

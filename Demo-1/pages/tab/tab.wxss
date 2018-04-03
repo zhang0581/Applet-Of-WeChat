@@ -1,0 +1,35 @@
+@import "../common/lib/weui.wxss";
+  
+.swiper-tab {  
+  display: flex;  
+  flex-direction: row;  
+  line-height: 80rpx;  
+  border-bottom: 2rpx solid #777;  
+}  
+  
+.tab-item {  
+  width: 33.3%;  
+  text-align: center;  
+  font-size: 15px;  
+  color: #777;  
+}  
+  
+.swiper {  
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  height: 1100rpx; 
+}  
+  
+/* 高亮 */
+.active {  
+  color: #02AF00;  
+  border-bottom: 5rpx solid #02AF00;  
+}  
+
+.cells:before {
+  border: none;
+}
+
+.cells {
+  margin-top: 0;
+}

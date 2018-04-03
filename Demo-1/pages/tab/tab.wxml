@@ -1,0 +1,46 @@
+<view class="wrap">
+    <view class="head">
+        <view class="head-title">最合适你的职业推荐</view>
+    </view>
+    <!-- 顶部导航栏 -->
+    <view class="swiper-tab">
+        <view wx:for="{{occupationsList}}" wx:key="id" class="tab-item {{currentTab == index ? 'active' : ''}}" data-current="{{index}}" bindtap="switchNav">
+            {{occupationsList[index].name}}
+        </view>
+    </view>
+    <!-- 主体内容 -->
+    <view class="body">
+        <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+            <swiper-item wx:for="{{occupationsList}}" wx:key="id">
+                <view class="weui-cells cells">
+                    <view class="weui-cell">
+                        <view class="weui-label">职业门槛</view>
+                        <view class="weui-cell__bd">{{occupationsList[index].threshold}}星</view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-label">难易程度</view>
+                        <view class="weui-cell__bd">{{occupationsList[index].difficult}}星</view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-label">成长周期</view>
+                        <view class="weui-cell__bd">{{occupationsList[index].cycle}}</view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-label">求贤企业</view>
+                        <view class="weui-cell__bd">{{occupationsList[index].company}}</view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-label">入学基础</view>
+                        <view class="weui-cell__bd">{{occupationsList[index].basis}}</view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-label">薪资待遇</view>
+                        <view class="weui-cell__bd">
+                            <view wx:for="{{salary}}" wx:key="time">{{salary[index].time}} 约 {{salary[index].salary}}K</view>
+                        </view>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>
